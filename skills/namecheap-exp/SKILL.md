@@ -1,3 +1,8 @@
+---
+name: namecheap-exp
+description: Reference for working with the Namecheap API. Documents all available API commands organized by category.
+---
+
 # Namecheap EXP Skill
 
 This skill provides a reference for working with the Namecheap API. It documents all available API commands organized by category.
