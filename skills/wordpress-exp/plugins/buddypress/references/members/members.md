@@ -1,0 +1,416 @@
+# Members
+
+## Topics
+
+## Schema
+
+The BuddyPress Members endpoint extends the WordPress Users one to include specific BuddyPress data such as profile fields data (1) and use the BP_User_Query instead of the WP_User_Query to fetch the members.
+
+(1) If the Extend profiles component is active on the website.
+
+The schema defines all the fields that exist for a member object.
+
+id
+
+integer	Unique identifier for the member.
+Read only
+Context: embed, view, edit
+name
+
+string	Display name for the member.
+Context: embed, view, edit
+mention_name
+
+string	The name used for that user in @-mentions.
+Context: embed, view, edit
+link
+
+string,
+uri	Profile URL of the member.
+Read only
+Context: embed, view, edit
+user_login
+
+string	An alphanumeric identifier for the member.
+Context: embed, view, edit
+member_types
+
+array
+Member types associated with the member. See this documentation page for more information.
+Read only
+Context: embed, view, edit
+registered_date
+
+string or null
+Registration date for the member.
+Read only
+Context: edit
+registered_date_gmt
+
+string or null	The date the member was registered, as GMT.
+Read only
+Context: edit
+password
+
+string	Password for the member (never included).
+Context: none
+roles
+
+array	Roles assigned to the member.
+Context: edit
+capabilities
+
+object	All capabilities assigned to the member.
+Read only
+Context: edit
+extra_capabilities
+
+object	All capabilities assigned to the member.
+Read only
+Context: edit
+xprofile (1)
+
+array	Member xProfile groups and its fields.
+Read only
+Context: view, edit
+friendship_status (2)
+
+boolean	Whether the logged in user has a friendship relationship with the fetched user.
+Read only
+Context: view, edit
+friendship_status_slug (2)
+
+string	Slug of the friendship relationship status the logged in user has with the fetched user.
+Read only
+One of: is_friend, not_friends, pending, awaiting_response
+Context: view, edit
+last_activity
+
+object	Last date the member was active on the site (object properties: timediff, date and date_gmt).
+Read only
+Context: view, edit
+latest_update (3)
+
+object	The content of the latest activity posted by the member (object properties: id, raw and rendered).
+Read only
+Context: view, edit
+total_friend_count (2)
+
+integer	Total number of friends for the member.
+Read only
+Context: view, edit
+avatar_urls (4)
+
+object	Avatar URLs for the member (Full & Thumb sizes).
+Read only
+Context: embed, view, edit
+
+(2) Data is only fetched if the Friends component is active
+(3) Data is only fetched if the Activity component is active
+(4) Only if the WordPress discussion settings allow avatars.
+
+## List Members
+
+### Arguments
+
+Name	Type	Description
+context	string	Scope under which the request is made; determines fields present in response.
+Default: view
+One of: view, embed, edit
+page	integer	Current page of the collection.
+Default: 1
+per_page	integer	Maximum number of members to be returned in result set.
+Default: 10
+search	string	Limit results to those matching a string.
+exclude	array	Ensure result set excludes specific IDs.
+Default: []
+include	array	Ensure result set include specific IDs.
+Default: []
+type	string	Shorthand for certain orderby/order combinations.
+Default: newest
+One of: active, newest, alphabetical, random, online, popular
+user_id	integer	Limit results to friends of a user.
+Default: 0
+user_ids	array	Pass IDs of users to limit result set.
+Default: []
+populate_extras	boolean	Whether to fetch extra BP data about the returned members.
+Default: false
+member_type	array	Limit results set to certain type(s). See this documentation page for more information.
+Default: []
+xprofile	array	Limit results set to a certain XProfile field.
+Default: []
+
+### Definition
+
+GET /buddypress/v1/members
+
+### Example of use
+
+Alert: To use the bp.apiRequest function, you need to enqueue the bp-api-request JavaScript or use it as a dependency of your script. Refer to this page to know more about loading JavaScript files in WordPress.
+
+```js
+bp.apiRequest( {
+  path: 'buddypress/v1/members',
+  type: 'GET',
+  data: {
+    context: 'view',
+    'xprofile': {
+        relation: 'AND',
+        args: [
+            {
+                field: 'Test field',
+                value: 'Hello world',
+                compare: '='
+            }
+        ]
+    },
+  }
+} ).done( function( data ) {
+  return data;
+} ).fail( function( error ) {
+  return error;
+} );
+```
+
+## Create a member
+
+### Arguments
+
+Name	Type	Description
+user_login	string	An alphanumeric identifier for the member.
+Required
+password	string	Password for the member.
+Required
+email	string	The email address for the member.
+Required
+name	string	Display name for the member.
+roles	array	Roles assigned to the member.
+member_type	string	A comma separated list of Member Types to set for the member. See this documentation page for more information.
+
+### Definition
+
+POST /buddypress/v1/members
+
+### Example of use
+
+Alert: To use the bp.apiRequest function, you need to enqueue the bp-api-request JavaScript or use it as a dependency of your script. Refer to this page to know more about loading JavaScript files in WordPress.
+
+```js
+bp.apiRequest( {
+  path: 'buddypress/v1/members',
+  type: 'POST',
+  data: {
+    context: 'edit',
+    name: 'Test User',
+    user_login: 'testuser',
+    email: 'test@user.mail',
+    password: 'password' // Always use strong passwords, not like this one!
+  }
+} ).done( function( data ) {
+  return data;
+} ).fail( function( error ) {
+  return error;
+} );
+```
+
+## Retrieve a specific member
+
+### Arguments
+
+Name	Type	Description
+id	integer	Unique identifier for the member.
+context	string	Scope under which the request is made; determines fields present in response.
+Default: view
+One of: view, embed, edit
+populate_extras	boolean	Whether to fetch extra BP data about the returned member.
+Default: false
+
+### Definition
+
+GET /buddypress/v1/members/<id>
+
+### Example of use
+
+Alert: To use the bp.apiRequest function, you need to enqueue the bp-api-request JavaScript or use it as a dependency of your script. Refer to this page to know more about loading JavaScript files in WordPress.
+
+```js
+bp.apiRequest( {
+  path: 'buddypress/v1/members/2',
+  type: 'GET',
+  data: {
+    context: 'view'
+  }
+} ).done( function( data ) {
+  return data;
+} ).fail( function( error ) {
+  return error;
+} );
+```
+
+## Update a specific member
+
+### Arguments
+
+Name	Type	Description
+id	integer	Unique identifier for the user.
+name	string	Display name for the member.
+roles	array	Roles assigned to the member.
+member_type	string	A comma separated list of Member Types to set for the member. See this documentation page for more information.
+
+### Definition
+
+PUT /buddypress/v1/members/<id>
+
+### Example of use
+
+Alert: To use the bp.apiRequest function, you need to enqueue the bp-api-request JavaScript or use it as a dependency of your script. Refer to this page to know more about loading JavaScript files in WordPress.
+
+```js
+bp.apiRequest( {
+  path: 'buddypress/v1/members/2',
+  type: 'PUT',
+  data: {
+    context: 'edit',
+    name: 'FirstName LastName',
+    roles: 'contributor'
+  }
+} ).done( function( data ) {
+  return data;
+} ).fail( function( error ) {
+  return error;
+} );
+```
+
+## Delete a specific member
+
+### Arguments
+
+Name	Type	Description
+id	integer	Unique identifier for the member.
+Required
+force	boolean	Required to be true, as members do not support trashing.
+reassign	integer	Reassign the deleted member's posts and links to this user ID.
+Required
+
+### Definition
+
+DELETE /buddypress/v1/members/<id>
+
+### Example of use
+
+Alert: To use the bp.apiRequest function, you need to enqueue the bp-api-request JavaScript or use it as a dependency of your script. Refer to this page to know more about loading JavaScript files in WordPress.
+
+```js
+bp.apiRequest( {
+  path: 'buddypress/v1/members/2',
+  type: 'DELETE',
+  data: {
+    context: 'edit',
+    force: true,
+    reassign: 1 // The User ID to reassign the deleted user's post to.
+  }
+} ).done( function( data ) {
+  return data;
+} ).fail( function( error ) {
+  return error;
+} );
+```
+
+## Retrieve the logged in member
+
+### Arguments
+
+Name	Type	Description
+context	string	Scope under which the request is made; determines fields present in response.
+Default: view
+One of: view, embed, edit
+
+### Definition
+
+GET /buddypress/v1/members/me
+
+### Example of use
+
+Alert: To use the bp.apiRequest function, you need to enqueue the bp-api-request JavaScript or use it as a dependency of your script. Refer to this page to know more about loading JavaScript files in WordPress.
+
+```js
+bp.apiRequest( {
+  path: 'buddypress/v1/members/me',
+  type: 'GET',
+  data: {
+    context: 'view'
+  }
+} ).done( function( data ) {
+  return data;
+} ).fail( function( error ) {
+  return error;
+} );
+```
+
+## Update the logged in member
+
+### Arguments
+
+Name	Type	Description
+name	string	Display name for the member.
+roles (1)	array	Roles assigned to the member.
+member_type	string	A comma separated list of Member Types to set for the member. See this documentation page for more information.
+(1) To update roles, the logged in member must have the promote_user capability.
+
+### Definition
+
+PUT /buddypress/v1/members/me
+
+### Example of use
+
+Alert: To use the bp.apiRequest function, you need to enqueue the bp-api-request JavaScript or use it as a dependency of your script. Refer to this page to know more about loading JavaScript files in WordPress.
+
+```js
+bp.apiRequest( {
+  path: 'buddypress/v1/members/me',
+  type: 'PUT',
+  data: {
+    context: 'edit',
+    name: 'FirstName LastName'
+  }
+} ).done( function( data ) {
+  return data;
+} ).fail( function( error ) {
+  return error;
+} );
+```
+
+## Delete the logged in member
+
+### Arguments
+
+Name	Type	Description
+force	boolean	True as users do not support trashing
+Required
+reassign	integer	Reassign the deleted member's posts and links to this user ID.
+Required
+
+### Definition
+
+DELETE /buddypress/v1/members/me
+
+### Example of use
+
+Alert: To use the bp.apiRequest function, you need to enqueue the bp-api-request JavaScript or use it as a dependency of your script. Refer to this page to know more about loading JavaScript files in WordPress.
+
+```js
+bp.apiRequest( {
+  path: 'buddypress/v1/members/me',
+  type: 'DELETE',
+  data: {
+    context: 'edit',
+    force: true,
+    reassign: 1 // The User ID to reassign the deleted user's post to.
+  }
+} ).done( function( data ) {
+  return data;
+} ).fail( function( error ) {
+  return error;
+} );
+```
+
