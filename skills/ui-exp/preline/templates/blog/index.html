@@ -1,0 +1,1680 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="theme-harvest">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link href="/src/main.css" rel="stylesheet">
+</head>
+
+<body class="bg-background">
+    <div id="hs-pro-sidebar"
+        class="hs-overlay [--auto-close:md] hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform w-65 hs-overlay-minified:w-13 overflow-hidden hidden fixed inset-y-0 z-60 inset-s-0 bg-white dark:bg-neutral-800 border-e border-gray-200 dark:border-neutral-700 md:block md:translate-x-0 md:inset-e-auto md:bottom-0"
+        role="dialog" tabindex="-1" aria-label="Sidebar">
+        <div class="relative flex flex-col h-full max-h-full">
+            <!-- Header -->
+            <header class="py-2.5 px-4 flex justify-between items-center gap-x-2">
+                <div class="-ms-2 flex items-center gap-x-1">
+                    <div class="md:hs-overlay-minified:hidden">
+                        <a class="shrink-0 inline-flex justify-center items-center size-9 rounded-lg text-xl inline-block font-semibold hover:bg-gray-100 dark:hover:bg-neutral-700 focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-700"
+                            href="@@href" aria-label="Preline">
+                            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" width="36" height="36"
+                                viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M18.0835 3.23358C9.88316 3.23358 3.23548 9.8771 3.23548 18.0723V35.5832H0.583496V18.0723C0.583496 8.41337 8.41851 0.583252 18.0835 0.583252C27.7485 0.583252 35.5835 8.41337 35.5835 18.0723C35.5835 27.7312 27.7485 35.5614 18.0835 35.5614H16.7357V32.911H18.0835C26.2838 32.911 32.9315 26.2675 32.9315 18.0723C32.9315 9.8771 26.2838 3.23358 18.0835 3.23358Z"
+                                    fill="currentColor" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M18.0833 8.62162C12.8852 8.62162 8.62666 12.9245 8.62666 18.2879V35.5833H5.97468V18.2879C5.97468 11.5105 11.3713 5.97129 18.0833 5.97129C24.7954 5.97129 30.192 11.5105 30.192 18.2879C30.192 25.0653 24.7954 30.6045 18.0833 30.6045H16.7355V27.9542H18.0833C23.2815 27.9542 27.54 23.6513 27.54 18.2879C27.54 12.9245 23.2815 8.62162 18.0833 8.62162Z"
+                                    fill="currentColor" />
+                                <path
+                                    d="M24.8225 18.1012C24.8225 21.8208 21.8053 24.8361 18.0833 24.8361C14.3614 24.8361 11.3442 21.8208 11.3442 18.1012C11.3442 14.3815 14.3614 11.3662 18.0833 11.3662C21.8053 11.3662 24.8225 14.3815 24.8225 18.1012Z"
+                                    fill="currentColor" />
+                            </svg>
+                        </a>
+
+                        <span class="truncate font-medium text-sm sm:text-base text-gray-800 dark:text-neutral-200">
+                            Preline UI Overview
+                        </span>
+                    </div>
+
+                    <!-- Sidebar Toggle -->
+                    <button type="button"
+                        class="hidden md:hs-overlay-minified:flex justify-center items-center flex-none gap-x-3 size-9 text-sm text-gray-500 dark:text-neutral-400 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-700 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-700"
+                        aria-haspopup="dialog" aria-expanded="true" aria-controls="hs-pro-sidebar"
+                        aria-label="Minify navigation" data-hs-overlay-minifier="#hs-pro-sidebar">
+                        <svg class="hidden hs-overlay-minified:block shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                            <path d="M15 3v18"></path>
+                            <path d="m8 9 3 3-3 3"></path>
+                        </svg>
+                        <svg class="hs-overlay-minified:hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                            <path d="M15 3v18"></path>
+                            <path d="m10 15-3-3 3-3"></path>
+                        </svg>
+                        <span class="sr-only">Sidebar Toggle</span>
+                    </button>
+                    <!-- End Sidebar Toggle -->
+                </div>
+
+                <!-- Sidebar Toggle -->
+                <button type="button"
+                    class="hidden md:hs-overlay-minified:hidden md:flex justify-center items-center flex-none gap-x-3 size-9 text-sm text-gray-500 dark:text-neutral-400 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-700 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-700"
+                    aria-haspopup="dialog" aria-expanded="true" aria-controls="hs-pro-sidebar"
+                    aria-label="Minify navigation" data-hs-overlay-minifier="#hs-pro-sidebar">
+                    <svg class="hidden hs-overlay-minified:block shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                        <path d="M15 3v18"></path>
+                        <path d="m8 9 3 3-3 3"></path>
+                    </svg>
+                    <svg class="hs-overlay-minified:hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                        <path d="M15 3v18"></path>
+                        <path d="m10 15-3-3 3-3"></path>
+                    </svg>
+                    <span class="sr-only">Sidebar Toggle</span>
+                </button>
+                <!-- End Sidebar Toggle -->
+
+                <!-- Sidebar Toggle -->
+                <button type="button"
+                    class="flex md:hidden justify-center items-center gap-x-3 size-6 bg-white dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 text-sm text-gray-500 dark:text-neutral-400 rounded-full hover:bg-gray-100 dark:hover:bg-neutral-700 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-700"
+                    data-hs-overlay="#hs-pro-sidebar" aria-expanded="true">
+                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                    </svg>
+                    <span class="sr-only">Close</span>
+                </button>
+                <!-- End Sidebar Toggle -->
+            </header>
+            <!-- End Header -->
+
+            <div class="mb-5 px-2 flex flex-col gap-y-5">
+                <!-- List -->
+                <ul class="flex flex-col gap-y-0.5">
+                    <li>
+                        <a class="group relative w-full flex items-center gap-1 py-1.5 px-2.5 text-sm rounded-lg before:absolute before:inset-y-0 before:-inset-s-2 before:rounded-e-full before:w-1 before:h-full text-gray-800 dark:text-neutral-200 hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 focus:bg-gray-100/70 dark:focus:bg-neutral-700/70"
+                            href="#">
+                            <span class="-ms-[5px] flex shrink-0 justify-center items-center size-6">
+                                <svg class="shrink-0 size-4 group-hover:scale-115 group-focus:scale-115 transition-transform duration-300"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M5 12h14" />
+                                    <path d="M12 5v14" />
+                                </svg>
+                            </span>
+                            <span class="truncate hs-overlay-minified:opacity-0 transition-opacity duration-300">
+                                New post
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <button type="button"
+                            class="group w-full flex items-center gap-1 py-1.5 px-2.5 text-sm text-gray-800 dark:text-neutral-200 truncate rounded-lg hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 focus:outline-hidden focus:bg-gray-100/70 dark:focus:bg-neutral-700/70"
+                            aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-pro-dnsm"
+                            data-hs-overlay="#hs-pro-dnsm">
+                            <span class="-ms-[5px] flex shrink-0 justify-center items-center size-6">
+                                <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        class="group-hover:scale-100 group-focus:scale-100 scale-115 transition-transform duration-300"
+                                        d="m21 21-4.34-4.34" />
+                                    <circle cx="11" cy="11" r="8" />
+                                </svg>
+                            </span>
+                            <span class="truncate hs-overlay-minified:opacity-0 transition-opacity duration-300">
+                                Search
+                            </span>
+                        </button>
+                    </li>
+                    <li>
+                        <a class="group relative w-full flex items-center gap-1 py-1.5 px-2.5 text-sm rounded-lg before:absolute before:inset-y-0 before:-inset-s-2 before:rounded-e-full before:w-1 before:h-full text-gray-800 dark:text-neutral-200 hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 focus:bg-gray-100/70 dark:focus:bg-neutral-700/70"
+                            href="#">
+                            <span class="-ms-[5px] flex shrink-0 justify-center items-center size-6">
+                                <svg class="shrink-0 size-4 group-hover:rotate-180 group-focus:rotate-180 transition-transform duration-300"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                                    <path d="M2 12h20" />
+                                </svg>
+                            </span>
+                            <span
+                                class="truncate hs-overlay-minified:opacity-0 transition-opacity duration-300">Explore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="group relative w-full flex items-center gap-1 py-1.5 px-2.5 text-sm rounded-lg before:absolute before:inset-y-0 before:-inset-s-2 before:rounded-e-full before:w-1 before:h-full text-gray-800 dark:text-neutral-200 hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 focus:bg-gray-100/70 dark:focus:bg-neutral-700/70"
+                            href="#">
+                            <span class="-ms-[5px] flex shrink-0 justify-center items-center size-6">
+                                <svg class="shrink-0 size-4 group-hover:scale-110 group-focus:scale-110 transition-transform duration-300"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M12 3v18" />
+                                    <path d="M3 12h18" />
+                                    <path d="m5.6 5.6 12.8 12.8" />
+                                    <path d="m18.4 5.6-12.8 12.8" />
+                                </svg>
+                            </span>
+                            <span
+                                class="truncate hs-overlay-minified:opacity-0 transition-opacity duration-300">Studio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="group relative w-full flex items-center gap-1 py-1.5 px-2.5 text-sm rounded-lg before:absolute before:inset-y-0 before:-inset-s-2 before:rounded-e-full before:w-1 before:h-full text-gray-800 dark:text-neutral-200 hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 focus:bg-gray-100/70 dark:focus:bg-neutral-700/70"
+                            href="#">
+                            <span class="-ms-[5px] flex shrink-0 justify-center items-center size-6">
+                                <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        class="group-hover:scale-110 group-focus:scale-110 transition-transform duration-300"
+                                        d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z" />
+                                    <path
+                                        class="group-hover:scale-95 group-focus:scale-95 transition-transform duration-300"
+                                        d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1" />
+                                </svg>
+                            </span>
+                            <span class="truncate hs-overlay-minified:opacity-0 transition-opacity duration-300">
+                                Chat
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- End List -->
+            </div>
+
+            <!-- Body -->
+            <div
+                class="hs-overlay-minified:opacity-0 transition-opacity duration-300 pb-4 px-2 size-full flex flex-col gap-y-5 overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-none [&::-webkit-scrollbar-track]:bg-gray-100 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500">
+                <div class="flex flex-col">
+                    <span class="block ps-2.5 mb-2 text-sm text-gray-400 dark:text-neutral-500">
+                        Recent chats
+                    </span>
+
+                    <!-- List -->
+                    <ul class="flex flex-col gap-y-0.5">
+                        <li>
+                            <div class="relative group">
+                                <a class="w-full flex items-center gap-x-2 py-2 ps-2.5 pe-8 text-sm text-gray-800 dark:text-neutral-200 truncate rounded-lg hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 focus:outline-hidden focus:bg-gray-100/70 dark:focus:bg-neutral-700/70"
+                                    href="chat-details.html">
+                                    <span class="truncate">Preline UI Overview</span>
+                                </a>
+
+                                <div
+                                    class="absolute top-1/2 inset-e-0 z-1 -translate-y-1/2 group-hover:opacity-100 opacity-0 transition-opacity duration-300">
+                                    <!-- More Dropdown -->
+                                    <div class="hs-dropdown [--scope:window] relative inline-flex">
+                                        <button id="hs-pro-chthmdid1" type="button"
+                                            class="flex justify-center items-center gap-x-3 size-8 text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 rounded-lg disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100/70 dark:focus:bg-neutral-700/70">
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="1" />
+                                                <circle cx="12" cy="5" r="1" />
+                                                <circle cx="12" cy="19" r="1" />
+                                            </svg>
+                                        </button>
+
+                                        <!-- More Dropdown -->
+                                        <div class="hs-dropdown-menu hs-dropdown-open:opacity-100 w-32 transition-[opacity,margin] duration opacity-0 hidden z-60 bg-white dark:bg-neutral-900 border border-transparent rounded-xl shadow-lg before:absolute before:-top-4 before:inset-s-0 before:w-full before:h-5"
+                                            role="menu" aria-orientation="vertical" aria-labelledby="hs-pro-chthmdid1">
+                                            <div class="p-1 space-y-0.5">
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                                                        <polyline points="16 6 12 2 8 6" />
+                                                        <line x1="12" x2="12" y1="2" y2="15" />
+                                                    </svg>
+                                                    Share
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path
+                                                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                                                        <path d="m15 5 4 4" />
+                                                    </svg>
+                                                    Rename
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <rect width="20" height="5" x="2" y="3" rx="1" />
+                                                        <path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8" />
+                                                        <path d="M10 12h4" />
+                                                    </svg>
+                                                    Archive
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-red-500 hover:bg-red-600/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-red-600/10">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M3 6h18" />
+                                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                                        <line x1="10" x2="10" y1="11" y2="17" />
+                                                        <line x1="14" x2="14" y1="11" y2="17" />
+                                                    </svg>
+                                                    Delete
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- End More Dropdown -->
+                                    </div>
+                                    <!-- End More Dropdown -->
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="relative group">
+                                <a class="w-full flex items-center gap-x-2 py-2 ps-2.5 pe-8 text-sm text-gray-800 dark:text-neutral-200 truncate rounded-lg hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 focus:outline-hidden focus:bg-gray-100/70 dark:focus:bg-neutral-700/70"
+                                    href="chat-details.html">
+                                    <span class="truncate">Product Photography Lighting Setup</span>
+                                </a>
+
+                                <div
+                                    class="absolute top-1/2 inset-e-0 z-1 -translate-y-1/2 group-hover:opacity-100 opacity-0 transition-opacity duration-300">
+                                    <!-- More Dropdown -->
+                                    <div class="hs-dropdown [--scope:window] relative inline-flex">
+                                        <button id="hs-pro-chthmdid2" type="button"
+                                            class="flex justify-center items-center gap-x-3 size-8 text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 rounded-lg disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100/70 dark:focus:bg-neutral-700/70">
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="1" />
+                                                <circle cx="12" cy="5" r="1" />
+                                                <circle cx="12" cy="19" r="1" />
+                                            </svg>
+                                        </button>
+
+                                        <!-- More Dropdown -->
+                                        <div class="hs-dropdown-menu hs-dropdown-open:opacity-100 w-32 transition-[opacity,margin] duration opacity-0 hidden z-60 bg-white dark:bg-neutral-900 border border-transparent rounded-xl shadow-lg before:absolute before:-top-4 before:inset-s-0 before:w-full before:h-5"
+                                            role="menu" aria-orientation="vertical" aria-labelledby="hs-pro-chthmdid2">
+                                            <div class="p-1 space-y-0.5">
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                                                        <polyline points="16 6 12 2 8 6" />
+                                                        <line x1="12" x2="12" y1="2" y2="15" />
+                                                    </svg>
+                                                    Share
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path
+                                                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                                                        <path d="m15 5 4 4" />
+                                                    </svg>
+                                                    Rename
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <rect width="20" height="5" x="2" y="3" rx="1" />
+                                                        <path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8" />
+                                                        <path d="M10 12h4" />
+                                                    </svg>
+                                                    Archive
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-red-500 hover:bg-red-600/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-red-600/10">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M3 6h18" />
+                                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                                        <line x1="10" x2="10" y1="11" y2="17" />
+                                                        <line x1="14" x2="14" y1="11" y2="17" />
+                                                    </svg>
+                                                    Delete
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- End More Dropdown -->
+                                    </div>
+                                    <!-- End More Dropdown -->
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="relative group">
+                                <a class="w-full flex items-center gap-x-2 py-2 ps-2.5 pe-8 text-sm text-gray-800 dark:text-neutral-200 truncate rounded-lg hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 focus:outline-hidden focus:bg-gray-100/70 dark:focus:bg-neutral-700/70"
+                                    href="chat-details.html">
+                                    <span class="truncate">Social Media Content</span>
+                                </a>
+
+                                <div
+                                    class="absolute top-1/2 inset-e-0 z-1 -translate-y-1/2 group-hover:opacity-100 opacity-0 transition-opacity duration-300">
+                                    <!-- More Dropdown -->
+                                    <div class="hs-dropdown [--scope:window] relative inline-flex">
+                                        <button id="hs-pro-chthmdid3" type="button"
+                                            class="flex justify-center items-center gap-x-3 size-8 text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 rounded-lg disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100/70 dark:focus:bg-neutral-700/70">
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="1" />
+                                                <circle cx="12" cy="5" r="1" />
+                                                <circle cx="12" cy="19" r="1" />
+                                            </svg>
+                                        </button>
+
+                                        <!-- More Dropdown -->
+                                        <div class="hs-dropdown-menu hs-dropdown-open:opacity-100 w-32 transition-[opacity,margin] duration opacity-0 hidden z-60 bg-white dark:bg-neutral-900 border border-transparent rounded-xl shadow-lg before:absolute before:-top-4 before:inset-s-0 before:w-full before:h-5"
+                                            role="menu" aria-orientation="vertical" aria-labelledby="hs-pro-chthmdid3">
+                                            <div class="p-1 space-y-0.5">
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                                                        <polyline points="16 6 12 2 8 6" />
+                                                        <line x1="12" x2="12" y1="2" y2="15" />
+                                                    </svg>
+                                                    Share
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path
+                                                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                                                        <path d="m15 5 4 4" />
+                                                    </svg>
+                                                    Rename
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <rect width="20" height="5" x="2" y="3" rx="1" />
+                                                        <path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8" />
+                                                        <path d="M10 12h4" />
+                                                    </svg>
+                                                    Archive
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-red-500 hover:bg-red-600/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-red-600/10">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M3 6h18" />
+                                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                                        <line x1="10" x2="10" y1="11" y2="17" />
+                                                        <line x1="14" x2="14" y1="11" y2="17" />
+                                                    </svg>
+                                                    Delete
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- End More Dropdown -->
+                                    </div>
+                                    <!-- End More Dropdown -->
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="relative group">
+                                <a class="w-full flex items-center gap-x-2 py-2 ps-2.5 pe-8 text-sm text-gray-800 dark:text-neutral-200 truncate rounded-lg hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 focus:outline-hidden focus:bg-gray-100/70 dark:focus:bg-neutral-700/70"
+                                    href="chat-details.html">
+                                    <span class="truncate">Website Optimization</span>
+                                </a>
+
+                                <div
+                                    class="absolute top-1/2 inset-e-0 z-1 -translate-y-1/2 group-hover:opacity-100 opacity-0 transition-opacity duration-300">
+                                    <!-- More Dropdown -->
+                                    <div class="hs-dropdown [--scope:window] relative inline-flex">
+                                        <button id="hs-pro-chthmdid4" type="button"
+                                            class="flex justify-center items-center gap-x-3 size-8 text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 rounded-lg disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100/70 dark:focus:bg-neutral-700/70">
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="1" />
+                                                <circle cx="12" cy="5" r="1" />
+                                                <circle cx="12" cy="19" r="1" />
+                                            </svg>
+                                        </button>
+
+                                        <!-- More Dropdown -->
+                                        <div class="hs-dropdown-menu hs-dropdown-open:opacity-100 w-32 transition-[opacity,margin] duration opacity-0 hidden z-60 bg-white dark:bg-neutral-900 border border-transparent rounded-xl shadow-lg before:absolute before:-top-4 before:inset-s-0 before:w-full before:h-5"
+                                            role="menu" aria-orientation="vertical" aria-labelledby="hs-pro-chthmdid4">
+                                            <div class="p-1 space-y-0.5">
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                                                        <polyline points="16 6 12 2 8 6" />
+                                                        <line x1="12" x2="12" y1="2" y2="15" />
+                                                    </svg>
+                                                    Share
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path
+                                                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                                                        <path d="m15 5 4 4" />
+                                                    </svg>
+                                                    Rename
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <rect width="20" height="5" x="2" y="3" rx="1" />
+                                                        <path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8" />
+                                                        <path d="M10 12h4" />
+                                                    </svg>
+                                                    Archive
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-red-500 hover:bg-red-600/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-red-600/10">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M3 6h18" />
+                                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                                        <line x1="10" x2="10" y1="11" y2="17" />
+                                                        <line x1="14" x2="14" y1="11" y2="17" />
+                                                    </svg>
+                                                    Delete
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- End More Dropdown -->
+                                    </div>
+                                    <!-- End More Dropdown -->
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="relative group">
+                                <a class="w-full flex items-center gap-x-2 py-2 ps-2.5 pe-8 text-sm text-gray-800 dark:text-neutral-200 truncate rounded-lg hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 focus:outline-hidden focus:bg-gray-100/70 dark:focus:bg-neutral-700/70"
+                                    href="chat-details.html">
+                                    <span class="truncate">Customer Support Ticket System</span>
+                                </a>
+
+                                <div
+                                    class="absolute top-1/2 inset-e-0 z-1 -translate-y-1/2 group-hover:opacity-100 opacity-0 transition-opacity duration-300">
+                                    <!-- More Dropdown -->
+                                    <div class="hs-dropdown [--scope:window] relative inline-flex">
+                                        <button id="hs-pro-chthmdid5" type="button"
+                                            class="flex justify-center items-center gap-x-3 size-8 text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 rounded-lg disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100/70 dark:focus:bg-neutral-700/70">
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="1" />
+                                                <circle cx="12" cy="5" r="1" />
+                                                <circle cx="12" cy="19" r="1" />
+                                            </svg>
+                                        </button>
+
+                                        <!-- More Dropdown -->
+                                        <div class="hs-dropdown-menu hs-dropdown-open:opacity-100 w-32 transition-[opacity,margin] duration opacity-0 hidden z-60 bg-white dark:bg-neutral-900 border border-transparent rounded-xl shadow-lg before:absolute before:-top-4 before:inset-s-0 before:w-full before:h-5"
+                                            role="menu" aria-orientation="vertical" aria-labelledby="hs-pro-chthmdid5">
+                                            <div class="p-1 space-y-0.5">
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                                                        <polyline points="16 6 12 2 8 6" />
+                                                        <line x1="12" x2="12" y1="2" y2="15" />
+                                                    </svg>
+                                                    Share
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path
+                                                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                                                        <path d="m15 5 4 4" />
+                                                    </svg>
+                                                    Rename
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <rect width="20" height="5" x="2" y="3" rx="1" />
+                                                        <path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8" />
+                                                        <path d="M10 12h4" />
+                                                    </svg>
+                                                    Archive
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-red-500 hover:bg-red-600/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-red-600/10">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M3 6h18" />
+                                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                                        <line x1="10" x2="10" y1="11" y2="17" />
+                                                        <line x1="14" x2="14" y1="11" y2="17" />
+                                                    </svg>
+                                                    Delete
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- End More Dropdown -->
+                                    </div>
+                                    <!-- End More Dropdown -->
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="relative group">
+                                <a class="w-full flex items-center gap-x-2 py-2 ps-2.5 pe-8 text-sm text-gray-800 dark:text-neutral-200 truncate rounded-lg hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 focus:outline-hidden focus:bg-gray-100/70 dark:focus:bg-neutral-700/70"
+                                    href="chat-details.html">
+                                    <span class="truncate">Mobile App Design</span>
+                                </a>
+
+                                <div
+                                    class="absolute top-1/2 inset-e-0 z-1 -translate-y-1/2 group-hover:opacity-100 opacity-0 transition-opacity duration-300">
+                                    <!-- More Dropdown -->
+                                    <div class="hs-dropdown [--scope:window] relative inline-flex">
+                                        <button id="hs-pro-chthmdid6" type="button"
+                                            class="flex justify-center items-center gap-x-3 size-8 text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 rounded-lg disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100/70 dark:focus:bg-neutral-700/70">
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="1" />
+                                                <circle cx="12" cy="5" r="1" />
+                                                <circle cx="12" cy="19" r="1" />
+                                            </svg>
+                                        </button>
+
+                                        <!-- More Dropdown -->
+                                        <div class="hs-dropdown-menu hs-dropdown-open:opacity-100 w-32 transition-[opacity,margin] duration opacity-0 hidden z-60 bg-white dark:bg-neutral-900 border border-transparent rounded-xl shadow-lg before:absolute before:-top-4 before:inset-s-0 before:w-full before:h-5"
+                                            role="menu" aria-orientation="vertical" aria-labelledby="hs-pro-chthmdid6">
+                                            <div class="p-1 space-y-0.5">
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                                                        <polyline points="16 6 12 2 8 6" />
+                                                        <line x1="12" x2="12" y1="2" y2="15" />
+                                                    </svg>
+                                                    Share
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path
+                                                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                                                        <path d="m15 5 4 4" />
+                                                    </svg>
+                                                    Rename
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <rect width="20" height="5" x="2" y="3" rx="1" />
+                                                        <path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8" />
+                                                        <path d="M10 12h4" />
+                                                    </svg>
+                                                    Archive
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-red-500 hover:bg-red-600/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-red-600/10">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M3 6h18" />
+                                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                                        <line x1="10" x2="10" y1="11" y2="17" />
+                                                        <line x1="14" x2="14" y1="11" y2="17" />
+                                                    </svg>
+                                                    Delete
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- End More Dropdown -->
+                                    </div>
+                                    <!-- End More Dropdown -->
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="relative group">
+                                <a class="w-full flex items-center gap-x-2 py-2 ps-2.5 pe-8 text-sm text-gray-800 dark:text-neutral-200 truncate rounded-lg hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 focus:outline-hidden focus:bg-gray-100/70 dark:focus:bg-neutral-700/70"
+                                    href="chat-details.html">
+                                    <span class="truncate">Ecommerce Payment Integration</span>
+                                </a>
+
+                                <div
+                                    class="absolute top-1/2 inset-e-0 z-1 -translate-y-1/2 group-hover:opacity-100 opacity-0 transition-opacity duration-300">
+                                    <!-- More Dropdown -->
+                                    <div class="hs-dropdown [--scope:window] relative inline-flex">
+                                        <button id="hs-pro-chthmdid7" type="button"
+                                            class="flex justify-center items-center gap-x-3 size-8 text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 rounded-lg disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100/70 dark:focus:bg-neutral-700/70">
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="1" />
+                                                <circle cx="12" cy="5" r="1" />
+                                                <circle cx="12" cy="19" r="1" />
+                                            </svg>
+                                        </button>
+
+                                        <!-- More Dropdown -->
+                                        <div class="hs-dropdown-menu hs-dropdown-open:opacity-100 w-32 transition-[opacity,margin] duration opacity-0 hidden z-60 bg-white dark:bg-neutral-900 border border-transparent rounded-xl shadow-lg before:absolute before:-top-4 before:inset-s-0 before:w-full before:h-5"
+                                            role="menu" aria-orientation="vertical" aria-labelledby="hs-pro-chthmdid7">
+                                            <div class="p-1 space-y-0.5">
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                                                        <polyline points="16 6 12 2 8 6" />
+                                                        <line x1="12" x2="12" y1="2" y2="15" />
+                                                    </svg>
+                                                    Share
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path
+                                                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                                                        <path d="m15 5 4 4" />
+                                                    </svg>
+                                                    Rename
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <rect width="20" height="5" x="2" y="3" rx="1" />
+                                                        <path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8" />
+                                                        <path d="M10 12h4" />
+                                                    </svg>
+                                                    Archive
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-red-500 hover:bg-red-600/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-red-600/10">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M3 6h18" />
+                                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                                        <line x1="10" x2="10" y1="11" y2="17" />
+                                                        <line x1="14" x2="14" y1="11" y2="17" />
+                                                    </svg>
+                                                    Delete
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- End More Dropdown -->
+                                    </div>
+                                    <!-- End More Dropdown -->
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="relative group">
+                                <a class="w-full flex items-center gap-x-2 py-2 ps-2.5 pe-8 text-sm text-gray-800 dark:text-neutral-200 truncate rounded-lg hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 focus:outline-hidden focus:bg-gray-100/70 dark:focus:bg-neutral-700/70"
+                                    href="chat-details.html">
+                                    <span class="truncate">Data Analytics Dashboard Setup</span>
+                                </a>
+
+                                <div
+                                    class="absolute top-1/2 inset-e-0 z-1 -translate-y-1/2 group-hover:opacity-100 opacity-0 transition-opacity duration-300">
+                                    <!-- More Dropdown -->
+                                    <div class="hs-dropdown [--scope:window] relative inline-flex">
+                                        <button id="hs-pro-chthmdid8" type="button"
+                                            class="flex justify-center items-center gap-x-3 size-8 text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 rounded-lg disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100/70 dark:focus:bg-neutral-700/70">
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="1" />
+                                                <circle cx="12" cy="5" r="1" />
+                                                <circle cx="12" cy="19" r="1" />
+                                            </svg>
+                                        </button>
+
+                                        <!-- More Dropdown -->
+                                        <div class="hs-dropdown-menu hs-dropdown-open:opacity-100 w-32 transition-[opacity,margin] duration opacity-0 hidden z-60 bg-white dark:bg-neutral-900 border border-transparent rounded-xl shadow-lg before:absolute before:-top-4 before:inset-s-0 before:w-full before:h-5"
+                                            role="menu" aria-orientation="vertical" aria-labelledby="hs-pro-chthmdid8">
+                                            <div class="p-1 space-y-0.5">
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                                                        <polyline points="16 6 12 2 8 6" />
+                                                        <line x1="12" x2="12" y1="2" y2="15" />
+                                                    </svg>
+                                                    Share
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path
+                                                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                                                        <path d="m15 5 4 4" />
+                                                    </svg>
+                                                    Rename
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <rect width="20" height="5" x="2" y="3" rx="1" />
+                                                        <path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8" />
+                                                        <path d="M10 12h4" />
+                                                    </svg>
+                                                    Archive
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-red-500 hover:bg-red-600/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-red-600/10">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M3 6h18" />
+                                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                                        <line x1="10" x2="10" y1="11" y2="17" />
+                                                        <line x1="14" x2="14" y1="11" y2="17" />
+                                                    </svg>
+                                                    Delete
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- End More Dropdown -->
+                                    </div>
+                                    <!-- End More Dropdown -->
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="relative group">
+                                <a class="w-full flex items-center gap-x-2 py-2 ps-2.5 pe-8 text-sm text-gray-800 dark:text-neutral-200 truncate rounded-lg hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 focus:outline-hidden focus:bg-gray-100/70 dark:focus:bg-neutral-700/70"
+                                    href="chat-details.html">
+                                    <span class="truncate">Video Production</span>
+                                </a>
+
+                                <div
+                                    class="absolute top-1/2 inset-e-0 z-1 -translate-y-1/2 group-hover:opacity-100 opacity-0 transition-opacity duration-300">
+                                    <!-- More Dropdown -->
+                                    <div class="hs-dropdown [--scope:window] relative inline-flex">
+                                        <button id="hs-pro-chthmdid9" type="button"
+                                            class="flex justify-center items-center gap-x-3 size-8 text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 rounded-lg disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100/70 dark:focus:bg-neutral-700/70">
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="1" />
+                                                <circle cx="12" cy="5" r="1" />
+                                                <circle cx="12" cy="19" r="1" />
+                                            </svg>
+                                        </button>
+
+                                        <!-- More Dropdown -->
+                                        <div class="hs-dropdown-menu hs-dropdown-open:opacity-100 w-32 transition-[opacity,margin] duration opacity-0 hidden z-60 bg-white dark:bg-neutral-900 border border-transparent rounded-xl shadow-lg before:absolute before:-top-4 before:inset-s-0 before:w-full before:h-5"
+                                            role="menu" aria-orientation="vertical" aria-labelledby="hs-pro-chthmdid9">
+                                            <div class="p-1 space-y-0.5">
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                                                        <polyline points="16 6 12 2 8 6" />
+                                                        <line x1="12" x2="12" y1="2" y2="15" />
+                                                    </svg>
+                                                    Share
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path
+                                                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                                                        <path d="m15 5 4 4" />
+                                                    </svg>
+                                                    Rename
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <rect width="20" height="5" x="2" y="3" rx="1" />
+                                                        <path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8" />
+                                                        <path d="M10 12h4" />
+                                                    </svg>
+                                                    Archive
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-red-500 hover:bg-red-600/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-red-600/10">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M3 6h18" />
+                                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                                        <line x1="10" x2="10" y1="11" y2="17" />
+                                                        <line x1="14" x2="14" y1="11" y2="17" />
+                                                    </svg>
+                                                    Delete
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- End More Dropdown -->
+                                    </div>
+                                    <!-- End More Dropdown -->
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="relative group">
+                                <a class="w-full flex items-center gap-x-2 py-2 ps-2.5 pe-8 text-sm text-gray-800 dark:text-neutral-200 truncate rounded-lg hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 focus:outline-hidden focus:bg-gray-100/70 dark:focus:bg-neutral-700/70"
+                                    href="chat-details.html">
+                                    <span class="truncate">Project Management Timeline</span>
+                                </a>
+
+                                <div
+                                    class="absolute top-1/2 inset-e-0 z-1 -translate-y-1/2 group-hover:opacity-100 opacity-0 transition-opacity duration-300">
+                                    <!-- More Dropdown -->
+                                    <div class="hs-dropdown [--scope:window] relative inline-flex">
+                                        <button id="hs-pro-chthmdid10" type="button"
+                                            class="flex justify-center items-center gap-x-3 size-8 text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 rounded-lg disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100/70 dark:focus:bg-neutral-700/70">
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="1" />
+                                                <circle cx="12" cy="5" r="1" />
+                                                <circle cx="12" cy="19" r="1" />
+                                            </svg>
+                                        </button>
+
+                                        <!-- More Dropdown -->
+                                        <div class="hs-dropdown-menu hs-dropdown-open:opacity-100 w-32 transition-[opacity,margin] duration opacity-0 hidden z-60 bg-white dark:bg-neutral-900 border border-transparent rounded-xl shadow-lg before:absolute before:-top-4 before:inset-s-0 before:w-full before:h-5"
+                                            role="menu" aria-orientation="vertical" aria-labelledby="hs-pro-chthmdid10">
+                                            <div class="p-1 space-y-0.5">
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                                                        <polyline points="16 6 12 2 8 6" />
+                                                        <line x1="12" x2="12" y1="2" y2="15" />
+                                                    </svg>
+                                                    Share
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path
+                                                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                                                        <path d="m15 5 4 4" />
+                                                    </svg>
+                                                    Rename
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <rect width="20" height="5" x="2" y="3" rx="1" />
+                                                        <path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8" />
+                                                        <path d="M10 12h4" />
+                                                    </svg>
+                                                    Archive
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-red-500 hover:bg-red-600/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-red-600/10">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M3 6h18" />
+                                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                                        <line x1="10" x2="10" y1="11" y2="17" />
+                                                        <line x1="14" x2="14" y1="11" y2="17" />
+                                                    </svg>
+                                                    Delete
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- End More Dropdown -->
+                                    </div>
+                                    <!-- End More Dropdown -->
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="relative group">
+                                <a class="w-full flex items-center gap-x-2 py-2 ps-2.5 pe-8 text-sm text-gray-800 dark:text-neutral-200 truncate rounded-lg hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 focus:outline-hidden focus:bg-gray-100/70 dark:focus:bg-neutral-700/70"
+                                    href="chat-details.html">
+                                    <span class="truncate">Brand Design System</span>
+                                </a>
+
+                                <div
+                                    class="absolute top-1/2 inset-e-0 z-1 -translate-y-1/2 group-hover:opacity-100 opacity-0 transition-opacity duration-300">
+                                    <!-- More Dropdown -->
+                                    <div class="hs-dropdown [--scope:window] relative inline-flex">
+                                        <button id="hs-pro-chthmdid11" type="button"
+                                            class="flex justify-center items-center gap-x-3 size-8 text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 rounded-lg disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100/70 dark:focus:bg-neutral-700/70">
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="1" />
+                                                <circle cx="12" cy="5" r="1" />
+                                                <circle cx="12" cy="19" r="1" />
+                                            </svg>
+                                        </button>
+
+                                        <!-- More Dropdown -->
+                                        <div class="hs-dropdown-menu hs-dropdown-open:opacity-100 w-32 transition-[opacity,margin] duration opacity-0 hidden z-60 bg-white dark:bg-neutral-900 border border-transparent rounded-xl shadow-lg before:absolute before:-top-4 before:inset-s-0 before:w-full before:h-5"
+                                            role="menu" aria-orientation="vertical" aria-labelledby="hs-pro-chthmdid11">
+                                            <div class="p-1 space-y-0.5">
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                                                        <polyline points="16 6 12 2 8 6" />
+                                                        <line x1="12" x2="12" y1="2" y2="15" />
+                                                    </svg>
+                                                    Share
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path
+                                                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                                                        <path d="m15 5 4 4" />
+                                                    </svg>
+                                                    Rename
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <rect width="20" height="5" x="2" y="3" rx="1" />
+                                                        <path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8" />
+                                                        <path d="M10 12h4" />
+                                                    </svg>
+                                                    Archive
+                                                </button>
+                                                <button type="button"
+                                                    class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-red-500 hover:bg-red-600/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-red-600/10">
+                                                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M3 6h18" />
+                                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                                        <line x1="10" x2="10" y1="11" y2="17" />
+                                                        <line x1="14" x2="14" y1="11" y2="17" />
+                                                    </svg>
+                                                    Delete
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- End More Dropdown -->
+                                    </div>
+                                    <!-- End More Dropdown -->
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- End List -->
+                </div>
+            </div>
+            <!-- End Body -->
+
+            <!-- Header -->
+            <div class="mb-5 px-2 flex flex-col gap-y-5">
+                <!-- List -->
+                <ul class="flex flex-col gap-y-0.5">
+                    <li>
+                        <a class="group relative w-full flex items-center gap-1 py-1.5 px-2.5 text-sm rounded-lg before:absolute before:inset-y-0 before:-inset-s-2 before:rounded-e-full before:w-1 before:h-full text-gray-800 dark:text-neutral-200 hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 focus:bg-gray-100/70 dark:focus:bg-neutral-700/70"
+                            href="#">
+                            <span class="-ms-[5px] flex shrink-0 justify-center items-center size-6">
+                                <svg class="shrink-0 size-4 group-hover:scale-115 group-focus:scale-115 transition-transform duration-300"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" />
+                                </svg>
+                            </span>
+                            <span class="truncate hs-overlay-minified:opacity-0 transition-opacity duration-300">
+                                What's new?
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="group relative w-full flex items-center gap-1 py-1.5 px-2.5 text-sm rounded-lg before:absolute before:inset-y-0 before:-inset-s-2 before:rounded-e-full before:w-1 before:h-full text-gray-800 dark:text-neutral-200 hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 focus:bg-gray-100/70 dark:focus:bg-neutral-700/70"
+                            href="#">
+                            <span class="-ms-[5px] flex shrink-0 justify-center items-center size-6">
+                                <svg class="shrink-0 size-4 group-hover:rotate-260 group-focus:rotate-180 transition-transform duration-300"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+                                </svg>
+                            </span>
+                            <span class="truncate hs-overlay-minified:opacity-0 transition-opacity duration-300">
+                                Help & support
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="group relative w-full flex items-center gap-1 py-1.5 px-2.5 text-sm rounded-lg before:absolute before:inset-y-0 before:-inset-s-2 before:rounded-e-full before:w-1 before:h-full text-gray-800 dark:text-neutral-200 hover:bg-gray-100/70 dark:hover:bg-neutral-700/70 focus:bg-gray-100/70 dark:focus:bg-neutral-700/70"
+                            href="#">
+                            <span class="-ms-[5px] flex shrink-0 justify-center items-center size-6">
+                                <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 7v14" />
+                                    <path
+                                        d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" />
+                                </svg>
+                            </span>
+                            <span class="truncate hs-overlay-minified:opacity-0 transition-opacity duration-300">
+                                Knowledge Base
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- End List -->
+            </div>
+            <!-- End Header -->
+
+        </div>
+    </div>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main
+        class="md:ps-65 md:hs-overlay-minified:ps-13 transition-all duration-300 pb-4 h-screen flex flex-col bg-white dark:bg-neutral-800">
+        <!-- ========== HEADER ========== -->
+        <header
+            class="md:ms-65 xl:hs-overlay-layout-open:me-96 md:hs-overlay-minified:ms-13 transition-all duration-300 fixed top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-48 md:z-61 bg-white dark:bg-neutral-800 py-2.5">
+            <nav class="px-4 sm:px-5.5 flex basis-full justify-between items-center w-full mx-auto">
+                <!-- Button Group -->
+                <div class="flex items-center sm:gap-x-1.5 truncate">
+                    <!-- Sidebar Toggle -->
+                    <button type="button"
+                        class="md:hidden flex justify-center items-center flex-none gap-x-3 size-9 text-sm text-gray-500 dark:text-neutral-400 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-700 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-700"
+                        aria-haspopup="dialog" aria-expanded="true" aria-controls="hs-pro-sidebar"
+                        aria-label="Minify navigation" data-hs-overlay="#hs-pro-sidebar">
+                        <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                            <path d="M15 3v18"></path>
+                            <path d="m8 9 3 3-3 3"></path>
+                        </svg>
+                        <span class="sr-only">Sidebar Toggle</span>
+                    </button>
+                    <!-- End Sidebar Toggle -->
+
+                    <a class="inline-flex items-center gap-x-1.5 text-sm text-gray-600 dark:text-neutral-300 decoration-2 hover:underline focus:outline-hidden focus:underline"
+                        href="#">
+                        <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m15 18-6-6 6-6" />
+                        </svg>
+                        Go Back
+                    </a>
+                </div>
+                <!-- End Button Group -->
+
+                <!-- Button Group -->
+                <ul class="flex flex-row items-center gap-x-3 ms-auto">
+                    <li
+                        class="hidden lg:inline-flex items-center gap-1.5 relative pe-3 last:pe-0 last:after:hidden after:absolute after:top-1/2 after:inset-e-0 after:inline-block after:w-px after:h-3.5 after:bg-navbar-2-divider after:rounded-full after:-translate-y-1/2 after:rotate-12">
+                        <button type="button"
+                            class="flex items-center gap-x-1.5 py-2 px-2.5 font-medium text-xs bg-navbar-2-nav-active text-surface-foreground rounded-lg hover:text-primary-hover focus:outline-hidden focus:text-primary-focus disabled:opacity-50 disabled:pointer-events-none">
+                            <svg class="shrink-0 size-4 text-primary" xmlns="http://www.w3.org/2000/svg" width="16"
+                                height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path
+                                    d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z" />
+                            </svg>
+                            Ask AI
+                        </button>
+                        <a class="flex items-center gap-x-1.5 py-1.5 px-2 text-sm text-navbar-2-nav-foreground rounded-lg hover:bg-navbar-2-nav-hover focus:outline-hidden focus:bg-navbar-2-nav-focus"
+                            href="#">
+                            Docs
+                        </a>
+                        <a class="flex items-center gap-x-1.5 py-1.5 px-2 text-sm text-navbar-2-nav-foreground rounded-lg hover:bg-navbar-2-nav-hover focus:outline-hidden focus:bg-navbar-2-nav-focus"
+                            href="#">
+                            API
+                        </a>
+                    </li>
+                    <li
+                        class="inline-flex items-center gap-1.5 relative pe-3 last:pe-0 last:after:hidden after:absolute after:top-1/2 after:inset-e-0 after:inline-block after:w-px after:h-3.5 after:bg-navbar-2-divider after:rounded-full after:-translate-y-1/2 after:rotate-12">
+                        <button type="button"
+                            class="relative inline-flex justify-center items-center gap-x-1.5 size-8 text-sm text-navbar-2-nav-foreground rounded-full hover:bg-navbar-2-nav-hover focus:outline-hidden focus:bg-navbar-2-nav-focus">
+                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 7v14" />
+                                <path
+                                    d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" />
+                            </svg>
+                            <span class="sr-only">Knowledge Base</span>
+                        </button>
+                        <button type="button"
+                            class="size-9.5 relative inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-foreground hover:bg-muted-hover focus:outline-hidden focus:bg-muted-focus disabled:opacity-50 disabled:pointer-events-none">
+                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+                                <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+                            </svg>
+                            <span class="sr-only">Notifications</span>
+                        </button>
+                        <button type="button"
+                            class="size-9.5 relative inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-foreground hover:bg-muted-hover focus:outline-hidden focus:bg-muted-focus disabled:opacity-50 disabled:pointer-events-none">
+                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            </svg>
+                            <span class="sr-only">Activity</span>
+                        </button>
+                        <div class="h-8">
+                            <!-- Account Dropdown -->
+                            <div
+                                class="hs-dropdown inline-flex [--strategy:absolute] [--auto-close:inside] [--placement:bottom-right] relative text-start">
+                                <button id="hs-dnad" type="button"
+                                    class="p-0.5 inline-flex shrink-0 items-center gap-x-3 text-start text-navbar-nav-foreground rounded-full hover:bg-navbar-nav-hover focus:outline-hidden focus:bg-navbar-nav-focus"
+                                    aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                                    <img class="shrink-0 size-7 rounded-full"
+                                        src="https://images.unsplash.com/photo-1659482633369-9fe69af50bfb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=3&w=320&h=320&q=80"
+                                        alt="Avatar">
+                                </button>
+                                <!-- Account Dropdown -->
+                                <div class="hs-dropdown-menu hs-dropdown-open:opacity-100 w-60 transition-[opacity,margin] duration opacity-0 hidden z-20 bg-dropdown border border-dropdown-line rounded-xl shadow-xl"
+                                    role="menu" aria-orientation="vertical" aria-labelledby="hs-dnad">
+                                    <div class="py-2 px-3.5">
+                                        <span class="font-medium text-foreground">
+                                            James Collison
+                                        </span>
+                                        <p class="text-sm text-muted-foreground-1">
+                                            jamescollison@site.com
+                                        </p>
+                                        <div class="mt-1.5">
+                                            <a class="flex justify-center items-center gap-x-1.5 py-2 px-2.5 font-medium text-[13px] bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary-hover focus:outline-hidden focus:bg-secondary-focus disabled:opacity-50 disabled:pointer-events-none"
+                                                href="#">
+                                                <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round">
+                                                    <path
+                                                        d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" />
+                                                    <path d="M20 3v4" />
+                                                    <path d="M22 5h-4" />
+                                                    <path d="M4 17v2" />
+                                                    <path d="M5 18H3" />
+                                                </svg>
+                                                Upgrade to Pro
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="px-4 py-2 border-t border-dropdown-divider grid gap-2">
+                                        <!-- Switch/Toggle Theme -->
+                                        <div class="flex flex-wrap justify-between items-center gap-2">
+                                            <span class="flex-1 cursor-pointer text-sm text-foreground">Theme</span>
+                                            <div class="p-0.5 inline-flex cursor-pointer bg-surface rounded-full">
+                                                <button type="button"
+                                                    class="size-7 flex justify-center items-center bg-layer shadow-sm text-layer-foreground rounded-full hs-auto-mode-active:bg-transparent hs-auto-mode-active:shadow-none hs-dark-mode-active:bg-transparent hs-dark-mode-active:shadow-none"
+                                                    data-hs-theme-click-value="default">
+                                                    <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <circle cx="12" cy="12" r="4" />
+                                                        <path d="M12 3v1" />
+                                                        <path d="M12 20v1" />
+                                                        <path d="M3 12h1" />
+                                                        <path d="M20 12h1" />
+                                                        <path d="m18.364 5.636-.707.707" />
+                                                        <path d="m6.343 17.657-.707.707" />
+                                                        <path d="m5.636 5.636.707.707" />
+                                                        <path d="m17.657 17.657.707.707" />
+                                                    </svg>
+                                                    <span class="sr-only">Default (Light)</span>
+                                                </button>
+                                                <button type="button"
+                                                    class="size-7 flex justify-center items-center text-layer-foreground rounded-full hs-dark-mode-active:bg-secondary-active hs-dark-mode-active:text-secondary-foreground hs-dark-mode-active:shadow-sm"
+                                                    data-hs-theme-click-value="dark">
+                                                    <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                                                    </svg>
+                                                    <span class="sr-only">Dark</span>
+                                                </button>
+                                                <button type="button"
+                                                    class="size-7 flex justify-center items-center text-layer-foreground rounded-full hs-auto-light-mode-active:bg-layer hs-auto-mode-active:shadow-sm"
+                                                    data-hs-theme-click-value="auto">
+                                                    <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <rect width="20" height="14" x="2" y="3" rx="2" />
+                                                        <line x1="8" x2="16" y1="21" y2="21" />
+                                                        <line x1="12" x2="12" y1="17" y2="21" />
+                                                    </svg>
+                                                    <span class="sr-only">Auto (System)</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- End Switch/Toggle Theme -->
+
+                                        <!-- Switch/Toggle Language -->
+                                        <div class="flex flex-wrap justify-between items-center gap-2">
+                                            <span class="flex-1 cursor-pointer text-sm text-foreground">Theme</span>
+                                            <!-- Language Dropdown -->
+                                            <div
+                                                class="hs-dropdown [--strategy:absolute] [--placement:bottom-right] relative inline-flex">
+                                                <button id="hs-pro-aimtlg" type="button"
+                                                    class="flex justify-center items-center gap-x-3 size-9 text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-700 rounded-lg disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-700">
+                                                    <svg class="shrink-0 size-4.5" xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="m5 8 6 6" />
+                                                        <path d="m4 14 6-6 2-3" />
+                                                        <path d="M2 5h12" />
+                                                        <path d="M7 2h1" />
+                                                        <path d="m22 22-5-10-5 10" />
+                                                        <path d="M14 18h6" />
+                                                    </svg>
+                                                    <span class="sr-only">Language</span>
+                                                </button>
+
+                                                <!-- Language Dropdown -->
+                                                <div class="hs-dropdown-menu hs-dropdown-open:opacity-100 w-40 transition-[opacity,margin] duration opacity-0 hidden z-11 bg-white dark:bg-neutral-900 border border-transparent rounded-xl shadow-lg before:absolute before:-top-4 before:inset-s-0 before:w-full before:h-5"
+                                                    role="menu" aria-orientation="vertical"
+                                                    aria-labelledby="hs-pro-aimtlg">
+                                                    <div class="p-1 space-y-0.5">
+                                                        <button type="button"
+                                                            class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                            English (US)
+                                                        </button>
+                                                        <button type="button"
+                                                            class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                            English (UK)
+                                                        </button>
+                                                        <button type="button"
+                                                            class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                            Deutsch
+                                                        </button>
+                                                        <button type="button"
+                                                            class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                            Dansk
+                                                        </button>
+                                                        <button type="button"
+                                                            class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                            Italiano
+                                                        </button>
+                                                        <button type="button"
+                                                            class="w-full flex items-center gap-x-3 py-1.5 px-2 rounded-lg text-sm text-gray-800 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:focus:bg-neutral-800">
+                                                            中文 (繁體)
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <!-- End Language Dropdown -->
+                                            </div>
+                                            <!-- End Language Dropdown -->
+                                        </div>
+                                        <!-- End Switch/Toggle Language -->
+                                    </div>
+                                    <div class="p-1 border-t border-dropdown-divider">
+                                        <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-dropdown-item-foreground hover:bg-dropdown-item-hover disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-dropdown-item-focus"
+                                            href="#">
+                                            <svg class="shrink-0 mt-0.5 size-4" xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                                <circle cx="12" cy="7" r="4" />
+                                            </svg>
+                                            Profile
+                                        </a>
+                                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-dropdown-item-foreground hover:bg-dropdown-item-hover disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-dropdown-item-focus"
+                                            href="#">
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+                                                <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+                                            </svg>
+                                            Newsletter
+                                        </a>
+                                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-dropdown-item-foreground hover:bg-dropdown-item-hover disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-dropdown-item-focus"
+                                            href="#">
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+                                                <path d="M3 6h18" />
+                                                <path d="M16 10a4 4 0 0 1-8 0" />
+                                            </svg>
+                                            Purchases
+                                        </a>
+                                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-dropdown-item-foreground hover:bg-dropdown-item-hover disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-dropdown-item-focus"
+                                            href="#">
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" />
+                                                <path d="M12 12v9" />
+                                                <path d="m8 17 4 4 4-4" />
+                                            </svg>
+                                            Downloads
+                                        </a>
+                                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-dropdown-item-foreground hover:bg-dropdown-item-hover disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-dropdown-item-focus"
+                                            href="#">
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                                <circle cx="9" cy="7" r="4" />
+                                                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                            </svg>
+                                            Team Account
+                                        </a>
+                                        <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-dropdown-item-foreground hover:bg-dropdown-item-hover disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-dropdown-item-focus"
+                                            href="#">
+                                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path
+                                                    d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
+                                                <circle cx="12" cy="12" r="3" />
+                                            </svg>
+                                            Settings
+                                        </a>
+                                        <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-dropdown-item-foreground hover:bg-dropdown-item-hover disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-dropdown-item-focus"
+                                            href="#">
+                                            <svg class="shrink-0 mt-0.5 size-4" xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <path d="m16 17 5-5-5-5" />
+                                                <path d="M21 12H9" />
+                                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                                            </svg>
+                                            Log out
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- End Account Dropdown -->
+                            </div>
+                            <!-- End Account Dropdown -->
+                        </div>
+                    </li>
+                </ul>
+                <!-- End Button Group -->
+            </nav>
+        </header>
+        <!-- ========== END HEADER ========== -->
+
+        <!-- Featured News Blog -->
+        <div class="p-4 flex flex-col">
+            <!-- Header -->
+            <div
+                class="pb-2 flex flex-wrap justify-between items-center gap-2 border-b border-dashed border-gray-200 dark:border-neutral-700">
+                <h2 class="font-medium text-gray-800 dark:text-neutral-200">
+                    Refresh
+                </h2>
+
+                <button type="button"
+                    class="py-1.5 px-2.5 flex items-center justify-center gap-x-1.5 border border-gray-200 dark:border-neutral-700 text-gray-800 dark:text-white text-[13px] rounded-lg py-1 hover:bg-blue-50 hover:border-blue-100 hover:text-blue-700 focus:outline-none focus:bg-blue-50 focus:border-blue-100 focus:text-blue-700 dark:hover:bg-blue-500/20 dark:hover:border-blue-500/20 dark:hover:text-blue-400 dark:focus:bg-blue-500/20 dark:focus:border-blue-500/20 dark:focus:text-blue-400">
+                    <svg class="shrink-0 size-3.5 animate-spin" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"></path>
+                        <path d="M21 3v5h-5"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- End Header -->
+
+            <!-- Card Blog -->
+            <div class="max-w-340 px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+                <!-- Title -->
+                <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+                    <h2 class="text-2xl font-bold md:text-4xl md:leading-tight text-gray-800 dark:text-neutral-200">The
+                        Blog</h2>
+                    <p class="mt-1 text-gray-600 dark:text-neutral-300">See how game-changing companies are making the
+                        most of every engagement with Preline.</p>
+                </div>
+                <!-- End Title -->
+
+                <!-- Grid -->
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Card -->
+                    <a class="group flex flex-col h-full bg-white dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 hover:border-transparent hover:shadow-lg focus:outline-hidden focus:border-transparent focus:shadow-lg transition duration-300 rounded-xl p-5"
+                        href="#">
+                        <div class="aspect-[16/11]">
+                            <img class="size-full object-cover rounded-xl"
+                                src="https://images.unsplash.com/photo-1633114128174-2f8aa49759b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80"
+                                alt="Blog Image">
+                        </div>
+                        <div class="my-6">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-neutral-200">
+                                Announcing a free plan for small teams
+                            </h3>
+                            <p class="mt-5 text-gray-600 dark:text-neutral-300">
+                                At Wake, our mission has always been focused on bringing openness.
+                            </p>
+                        </div>
+                        <div class="mt-auto flex items-center gap-x-3">
+                            <img class="size-8 rounded-full"
+                                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
+                                alt="Avatar">
+                            <div>
+                                <p class="text-sm text-gray-800 dark:text-neutral-200">By Lauren Waller</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- End Card -->
+
+                    <!-- Card -->
+                    <a class="group flex flex-col h-full bg-white dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 hover:border-transparent hover:shadow-lg focus:outline-hidden focus:border-transparent focus:shadow-lg transition duration-300 rounded-xl p-5"
+                        href="#">
+                        <div class="aspect-[16/11]">
+                            <img class="size-full object-cover rounded-xl"
+                                src="https://images.unsplash.com/photo-1562851529-c370841f6536?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80"
+                                alt="Blog Image">
+                        </div>
+                        <div class="my-6">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-neutral-200">
+                                How Google Assistant now helps you record stories for kids
+                            </h3>
+                            <p class="mt-5 text-gray-600 dark:text-neutral-300">
+                                Google is constantly updating its consumer AI, Google Assistant, with new features.
+                            </p>
+                        </div>
+                        <div class="mt-auto flex items-center gap-x-3">
+                            <img class="size-8 rounded-full"
+                                src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
+                                alt="Avatar">
+                            <div>
+                                <p class="text-sm text-gray-800 dark:text-neutral-200">By Aaron Larsson</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- End Card -->
+
+                    <!-- Card -->
+                    <a class="group flex flex-col h-full bg-white dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 hover:border-transparent hover:shadow-lg focus:outline-hidden focus:border-transparent focus:shadow-lg transition duration-300 rounded-xl p-5"
+                        href="#">
+                        <div class="aspect-[16/11]">
+                            <img class="size-full object-cover rounded-xl"
+                                src="https://images.unsplash.com/photo-1521321205814-9d673c65c167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80"
+                                alt="Blog Image">
+                        </div>
+                        <div class="my-6">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-neutral-200">
+                                Front accounts - let's work together
+                            </h3>
+                            <p class="mt-5 text-gray-600 dark:text-neutral-300">
+                                Are you an accountant? Are you a company formation advisor?
+                            </p>
+                        </div>
+                        <div class="mt-auto flex items-center gap-x-3">
+                            <img class="size-8 rounded-full"
+                                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
+                                alt="Avatar">
+                            <div>
+                                <p class="text-sm text-gray-800 dark:text-neutral-200">By Lauren Waller</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- End Card -->
+                </div>
+                <!-- End Grid -->
+
+                <!-- Card -->
+                <div class="mt-12 text-center">
+                    <a class="py-3 px-4 inline-flex items-center gap-x-1 text-sm font-medium rounded-full bg-white dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 text-blue-600 dark:text-blue-500 shadow-2xs hover:bg-gray-50 dark:hover:bg-neutral-700 focus:outline-hidden focus:bg-gray-50 dark:focus:bg-neutral-700 disabled:opacity-50 disabled:pointer-events-none"
+                        href="#">
+                        Read more
+                        <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </a>
+                </div>
+                <!-- End Card -->
+            </div>
+            <!-- End Card Blog -->
+
+        </div>
+        <!-- End Featured News Blog -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
