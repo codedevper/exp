@@ -1,0 +1,103 @@
+@keyframes spinner-pulse-dot {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0.82;
+    }
+}
+
+@keyframes spinner-wave {
+
+    0%,
+    100% {
+        transform: scaleY(0.4);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+@keyframes spinner-bars {
+
+    0%,
+    100% {
+        transform: scaleY(0.55);
+        opacity: 0.45;
+    }
+
+    50% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+@keyframes spinner-caret {
+
+    0%,
+    49% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes spinner-shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.spinner-shimmer-text {
+    background-image: linear-gradient(90deg,
+            var(--color-muted-foreground-1) 0%,
+            var(--color-foreground) 45%,
+            var(--color-muted-foreground-1) 55%,
+            var(--color-muted-foreground-1) 100%);
+    background-size: 200% 100%;
+}
+
+@keyframes spinner-ellipsis {
+
+    0%,
+    70%,
+    100% {
+        transform: translateY(0);
+    }
+
+    35% {
+        transform: translateY(-0.4em);
+    }
+}
+
+@keyframes typing {
+    0% {
+        opacity: 1;
+        scale: 1;
+    }
+
+    50% {
+        opacity: 0.75;
+        scale: 0.75;
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
