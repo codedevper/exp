@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/* Preline UI */
+@source "../../node_modules/preline/dist/*.js";
+@import "../../node_modules/preline/variants.css";
+
+/* Plugins */
+@plugin "@tailwindcss/forms";
+
+/* Preline Themes */
+/* Base theme tokens + mappings */
+@import "./themes/theme.css";
+/* Optional: predefined themes (import only what you need) */
+@import "./themes/harvest.css";
+@import "./themes/retro.css";
+@import "./themes/ocean.css";
+@import "./themes/autumn.css";
+@import "./themes/moon.css";
+@import "./themes/bubblegum.css";
+@import "./themes/cashmere.css";
+@import "./themes/olive.css";
+@import "./themes/default.css";
+@import "./themes/marquee.css";
+@import "./themes/spinner.css";
+@import "./themes/fonts.css";
+
+/* Adds pointer cursor to buttons */
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+/* Defaults hover styles on all devices */
+@custom-variant hover (&:hover);
+
+/* Toggling dark mode manually */
+@custom-variant dark (&:where(.dark, .dark *));
+
+[x-cloak] {
+    display: none;
+}
